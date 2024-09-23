@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Parejas</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <link href=" https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css " rel="stylesheet">
+        <link rel="stylesheet" href="./style.css">
+        <style>
+
+        </style>
+    </head>
+    <body>
+        <!--Modal para establecer los jugadores-->
+        <div class="modal fade" id="modalSetPlayers" tabindex="-1" aria-labelledby="modalSetPlayersLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="modalSetPlayersLabel">Ingresa los nombres de los jugadores</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <form id="playersForm">
+                    <div class="mb-3">
+                      <h3>Jugador 1</h3>
+                      <label for="player1Name" class="form-label">Nombre</label>
+                      <input type="text" class="form-control" id="inputPlayer1Name" required>
+                      <label for="avatar">Avatar</label>
+                      <div class="d-flex justify-content-center align-items-center " id="avatarPlayer1">
+                        <!--Avatar a elegir-->
+                      </div>
+                    </div>
+                    <div class="mb-3">
+                      <h3>Jugador 2</h3>
+                      <label for="player2Name" class="form-label">Nombre</label>
+                      <input type="text" class="form-control" id="inputPlayer2Name" required>
+                      <label for="avatar">Avatar</label>
+                      <div class="d-flex justify-content-center align-items-center " id="avatarPlayer2">
+                        <!--Avatar a elegir-->
+                      </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Empezar la partida!</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        <!--Fin del modal-->      
+        <!--Modal ganador-->
+           <div class="modal fade" id="modalWinner" tabindex="-1" aria-labelledby="modalWinnerLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content text-center">
+                <div class="modal-header">
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div> 
+                <div class="modal-body">
+                  <div class="row">
+                    <div class="col-6">
+                      <img src="../images/youwin.jpg" alt="has ganado" class="img-fluid" id="winnerImg">
+                    </div>
+                    <div class="col-6 d-flex justify-content-center align-items-center flex-column">
+                      <h1 id="winner"></h1>
+                      <h2 id="winnerPoints"></h2>
+                    </div>
+                  </div> 
+                </div>
+              </div>
+            </div>
+          </div>
+        <!--Fin del modal-->     
+        <div class="container-fluid  p-5 text-center bg-olas">
+          <h1>Encuentra las parejas</h1>
+          <h2 id="playerTurn">Turno del jugador: 1</h2>
+          <div class="container-fluid d-flex justify-content-center align-items-center">
+           <div class="card" style="width: 18rem;" id="player1Card">
+            <div class="card-body">
+              <img src="" alt="" id="player1Icon">
+              <h5 class="card-title" id="playerName1"></h5>
+              <h6 class="card-subtitle mb-2 text-muted">Jugador 1</h6>
+              <p class="card-text">Puntos</p>
+              <p class="card-text" id="playerPoints1"></p>
+            </div>
+          </div>
+            <div  id="card-container" class="row  justify-content-center">       
+                <!--aqui se cargan las cartas desde-->
+            </div>
+            <div class="card" style="width: 18rem;" id="player2Card">
+                <div class="card-body">
+                  <img src="" alt="" id="player2Icon">
+                  <h5 class="card-title" id="playerName2"></h5>
+                  <h6 class="card-subtitle mb-2 text-muted">Jugador 2</h6>
+                  <p class="card-text">Puntos</p>
+                  <p class="card-text" id="playerPoints2"></p>
+                </div>
+              </div>
+          </div>
+          <div class="">
+            <div class="col">
+                <button onclick="resetGame()" class="btn btn-primary">Volver a jugar</button>
+            </div>
+          </div>
+        </div>
+        <script src="./Parejas.js" async defer></script>
+    </body>
+</html>

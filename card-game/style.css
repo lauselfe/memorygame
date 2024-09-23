@@ -1,0 +1,55 @@
+.bg-olas{
+   background-color: rgb(172, 210, 243);
+}
+.frontside{
+    display: none;
+}
+
+.backside{
+    display: block;
+}
+.card{
+   height: fit-content;       
+
+}
+.show-back .frontside {
+    display: block; 
+}
+.flipped .frontside {
+    display: block; 
+}
+
+.flipped .backside {
+    display: none; 
+}
+
+#card-container{
+    width: 50%;
+    margin: 1rem;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 20px;
+
+    
+}
+.player1turn{
+    border: 3px solid rgb(0, 26, 255); 
+    -webkit-box-shadow: -1px 2px 41px -3px rgba(148, 159, 250, 1);
+    -moz-box-shadow: -1px 2px 41px -3px rgba(148, 159, 250, 1);
+    box-shadow: -1px 2px 41px -3px rgba(148, 159, 250, 1);
+}
+
+.player2turn{ 
+    border: 3px solid rgb(255, 0, 0); 
+    -webkit-box-shadow: -1px 2px 41px -3px rgba(250, 142, 142, 1);
+    -moz-box-shadow: -1px 2px 41px -3px  rgba(250, 142, 142, 1);
+    box-shadow: -1px 2px 41px -3px  rgba(250, 142, 142, 1);
+}
+
+.btn-reset-game{
+    background-color: rgb(152, 195, 233);
+}
+
+#card-container{
+    background-color: aliceblue;
+}
