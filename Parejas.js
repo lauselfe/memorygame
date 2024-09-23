@@ -1,28 +1,28 @@
 const cards = [
-  { id: 'luffy1', imgFront: './images/luffy1.jpg', imgBack: '../../becajulio2024/images/back.jpg' },
-  { id: 'luffy2', imgFront: './images/luffy1.jpg', imgBack: '../../becajulio2024/images/back.jpg' },
-  { id: 'zoro1', imgFront: './images/zoro.jpg', imgBack: '../../becajulio2024/images/back.jpg' },
-  { id: 'zoro2', imgFront: './images/zoro.jpg', imgBack: '../../becajulio2024/images/back.jpg' },
-  { id: 'nami1', imgFront: './images/nami.jpg', imgBack: '../../becajulio2024/images/back.jpg' },
-  { id: 'nami2', imgFront: './images/nami.jpg', imgBack: '../../becajulio2024/images/back.jpg' },
-  { id: 'ussop1', imgFront: './images/ussop.jpg', imgBack: '../../becajulio2024/images/back.jpg' },
-  { id: 'ussop2', imgFront: './images/ussop.jpg', imgBack: '../../becajulio2024/images/back.jpg' },
-  { id: 'sanji1', imgFront: './images/sanji.jpg', imgBack: '../../becajulio2024/images/back.jpg' },
-  { id: 'sanji2', imgFront: './images/sanji.jpg', imgBack: '../../becajulio2024/images/back.jpg' },
-  { id: 'chopper1', imgFront: './images/chopper.jpg', imgBack: '../../becajulio2024/images/back.jpg' },
-  { id: 'chopper2', imgFront: './images/chopper.jpg', imgBack: '../../becajulio2024/images/back.jpg' },
-  { id: 'robin1', imgFront: './images/robin.jpg', imgBack: '../../becajulio2024/images/back.jpg' },
-  { id: 'robin2', imgFront: './images/robin.jpg', imgBack: '../../becajulio2024/images/back.jpg' },
-  { id: 'franky1', imgFront: './images/franky.jpg', imgBack: '../../becajulio2024/images/back.jpg' },
-  { id: 'franky2', imgFront: './images/franky.jpg', imgBack: '../../becajulio2024/images/back.jpg' },
-  { id: 'brook1', imgFront: './images/brook.jpg', imgBack: '../../becajulio2024/images/back.jpg' },
-  { id: 'brook2', imgFront: './images/brook.jpg', imgBack: '../../becajulio2024/images/back.jpg' },
-  { id: 'jinbe1', imgFront: './images/jinbe.jpg', imgBack: '../../becajulio2024/images/back.jpg' },
-  { id: 'jinbe2', imgFront: './images/jinbe.jpg', imgBack: '../../becajulio2024/images/back.jpg' },
-  { id: 'vivi1', imgFront: './images/vivi.jpg', imgBack: '../../becajulio2024/images/back.jpg' },
-  { id: 'vivi2', imgFront: './images/vivi.jpg', imgBack: '../../becajulio2024/images/back.jpg' },
-  { id: 'yamato1', imgFront: './images/yamato.jpg', imgBack: '../../becajulio2024/images/back.jpg' },
-  { id: 'yamato2', imgFront: './images/yamato.jpg', imgBack: '../../becajulio2024/images/back.jpg' }
+  { id: 'luffy1', imgFront: './images/luffy1.jpg', imgBack: './images/back.jpg' },
+  { id: 'luffy2', imgFront: './images/luffy1.jpg', imgBack: './images/back.jpg' },
+  { id: 'zoro1', imgFront: './images/zoro.jpg', imgBack: './images/back.jpg' },
+  { id: 'zoro2', imgFront: './images/zoro.jpg', imgBack: './images/back.jpg' },
+  { id: 'nami1', imgFront: './images/nami.jpg', imgBack: './images/back.jpg' },
+  { id: 'nami2', imgFront: './images/nami.jpg', imgBack: './images/back.jpg' },
+  { id: 'ussop1', imgFront: './images/ussop.jpg', imgBack: './images/back.jpg' },
+  { id: 'ussop2', imgFront: './images/ussop.jpg', imgBack: './images/back.jpg' },
+  { id: 'sanji1', imgFront: './images/sanji.jpg', imgBack: './images/back.jpg' },
+  { id: 'sanji2', imgFront: './images/sanji.jpg', imgBack: './images/back.jpg' },
+  { id: 'chopper1', imgFront: './images/chopper.jpg', imgBack: './images/back.jpg' },
+  { id: 'chopper2', imgFront: './images/chopper.jpg', imgBack: './images/back.jpg' },
+  { id: 'robin1', imgFront: './images/robin.jpg', imgBack: './images/back.jpg' },
+  { id: 'robin2', imgFront: './images/robin.jpg', imgBack: './images/back.jpg' },
+  { id: 'franky1', imgFront: './images/franky.jpg', imgBack: './images/back.jpg' },
+  { id: 'franky2', imgFront: './images/franky.jpg', imgBack: './images/back.jpg' },
+  { id: 'brook1', imgFront: './images/brook.jpg', imgBack: './images/back.jpg' },
+  { id: 'brook2', imgFront: './images/brook.jpg', imgBack: './images/back.jpg' },
+  { id: 'jinbe1', imgFront: './images/jinbe.jpg', imgBack: './images/back.jpg' },
+  { id: 'jinbe2', imgFront: './images/jinbe.jpg', imgBack: './images/back.jpg' },
+  { id: 'vivi1', imgFront: './images/vivi.jpg', imgBack: './images/back.jpg' },
+  { id: 'vivi2', imgFront: './images/vivi.jpg', imgBack: './images/back.jpg' },
+  { id: 'yamato1', imgFront: './images/yamato.jpg', imgBack: './images/back.jpg' },
+  { id: 'yamato2', imgFront: './images/yamato.jpg', imgBack: './images/back.jpg' }
 ];
 
 const iconsPlayers = [
@@ -302,14 +302,14 @@ function showWinner() {
   if (player1Points > player2Points) {
     document.getElementById('winner').innerHTML = "Has ganado " + player1 + "!";
     document.getElementById('winnerPoints').innerHTML = "Con " + player1Points + " puntos!";
-    document.getElementById('winnerImg').src = "../images/youwin.jpg";
+    document.getElementById('winnerImg').src = "./images/youwin.jpg";
   } else if (player1Points < player2Points) {
     document.getElementById('winner').innerHTML = "Has ganado " + player2 + "!";
     document.getElementById('winnerPoints').innerHTML = "Con " + player2Points + " puntos!";
-    document.getElementById('winnerImg').src = "../images/youwin.jpg";
+    document.getElementById('winnerImg').src = "./images/youwin.jpg";
   } else {
     document.getElementById('winner').innerHTML = "Empate!";
-    document.getElementById('winnerImg').src = "../images/drawgame.jpg";
+    document.getElementById('winnerImg').src = "./images/drawgame.jpg";
   }
 }
 
